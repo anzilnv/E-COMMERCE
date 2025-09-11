@@ -35,6 +35,15 @@ const setCookie = (res, accessToken, refreshToken) => {
     })
 }
 
+
+
+
+
+
+// jyftg\
+
+
+
 export const signup = async (req, res) => {
     const { email, password, name } = req.body;
     try {
