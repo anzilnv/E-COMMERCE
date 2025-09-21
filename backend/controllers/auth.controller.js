@@ -12,8 +12,7 @@ const generateAuthTokens = (userId) => {
 
     return { accessToken, refreshToken };
 }
-console.log("Using secrets:", process.env.ACCESS_SECRET, process.env.REFRESH_SECRET);
-console.log("Length of ACCESS_SECRET:", process.env.ACCESS_SECRET?.length);
+
 
 
 const storeRedisTokens = async (userId, refreshToken) => {
@@ -34,15 +33,6 @@ const setCookie = (res, accessToken, refreshToken) => {
         maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     })
 }
-
-
-
-
-
-
-// jyftg\
-
-
 
 export const signup = async (req, res) => {
     const { email, password, name } = req.body;
